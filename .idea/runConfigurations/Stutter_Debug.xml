@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Stutter Debug" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Stutter" TARGET_NAME="Stutter" CONFIG_NAME="Debug" SCHEME_NAME="Stutter Debug" RUN_TARGET_PROJECT_NAME="Stutter" RUN_TARGET_NAME="Stutter" MAKE_ACTIVE="TRUE">
+    <envs />
+    <method />
+  </configuration>
+</component>
