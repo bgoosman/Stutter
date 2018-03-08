@@ -50,7 +50,9 @@ public:
     bool inFullscreen = false;
     bool stutterScheduled = false;
 	bool reverseScheduled = false;
+    bool effectGeneratorScheduled = false;
     bool isPlayingTone = false;
+    float timeStarted = -1;
 
     // Maximillian
     ofxMaxiOsc oscillator;

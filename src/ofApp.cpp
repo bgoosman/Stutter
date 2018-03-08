@@ -10,8 +10,8 @@ void ofApp::setup(){
     audioBufferSize = 512;
     frequency = 440;
     ofxMaxiSettings::setup(sampleRate, 2, audioBufferSize);
-    mySample.load(ofToDataPath("forward arrows.wav"));
-    backwardSample.load(ofToDataPath("backward arrows.wav"));
+    mySample.load(ofToDataPath("new dreams tonite forward.wav"));
+    backwardSample.load(ofToDataPath("new dreams tonite backward.wav"));
     currentSample = &mySample;
     ofSoundStreamSetup(2, 0, this, sampleRate, audioBufferSize, 4);
 
@@ -46,13 +46,18 @@ ofApp::~ofApp() {
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    ofSetWindowTitle(ofToString(ofGetFrameRate()));
+//    ofSetWindowTitle(ofToString(ofGetFrameRate()));
     float const beat = ableton.getBeat();
     propertyBag.update();
     playModes.update();
 
     double intPart, fractionalPart;
     fractionalPart = modf(beat, &intPart);
+
+    if (timeStarted > 0 && ofGetElapsedTimef() - timeStarted >= 60 * 5) {
+        ofExit();
+        return;
+    }
 
     if (playModes.isInitialized()) {
         static bool firstTimeSetup = true;
@@ -61,9 +66,10 @@ void ofApp::update(){
             firstTimeSetup = false;
         }
 
-        if (fractionalPart <= 0.05 && effectGenerator == nullptr) {
+        if (fractionalPart <= 0.05 && effectGenerator == nullptr && effectGeneratorScheduled) {
+            effectGeneratorScheduled = false;
             effectGenerator = (ofxBenG::beat_action *) new ofxBenG::effect_generator(
-                    beat,
+                    beat + 30,
                     beatsPerMinute,
                     60.0f,
                     &playModes.buffers[0],
@@ -120,9 +126,10 @@ void ofApp::setCurrentSample(ofxMaxiSample* sample) {
 void ofApp::audioOut(float* output, int bufferSize, int nChannels) {
     for (int i = 0; i < bufferSize; i++) {
         float mix = 0;
-        mix += currentSample->playOnce();
+        if (effectGenerator != nullptr)
+            mix += currentSample->playOnce();
         if (isPlayingTone)
-            mix += oscillator.sinewave(frequency);
+            mix += oscillator.sinewave(frequency) / 3;
         output[nChannels * i] = mix;
         output[nChannels * i + 1] = mix;
     }
@@ -141,15 +148,15 @@ void ofApp::draw(){
         renderer.draw(0, 0, ofGetWidth(), ofGetHeight());
     }
 
-    if (!inFullscreen) {
-        float y = 15;
-        ofxBenG::utilities::drawLabelValue("beat", ableton.getBeat(), y);
-        ofxBenG::utilities::drawLabelValue("bpm", ableton.getTempo(), y += 20);
-        ofxBenG::utilities::drawLabelValue("stutterTimes", stutterTimes, y += 20);
-        ofxBenG::utilities::drawLabelValue("recordLengthBeats", recordLengthBeats, y += 20);
-        ofxBenG::utilities::drawLabelValue("stutterLengthBeats", stutterLengthBeats, y += 20);
-        ofxBenG::utilities::drawLabelValue("stutterDelayBeats", stutterDelayBeats, y += 20);
-    }
+//    if (!inFullscreen) {
+//        float y = 15;
+//        ofxBenG::utilities::drawLabelValue("beat", ableton.getBeat(), y);
+//        ofxBenG::utilities::drawLabelValue("bpm", ableton.getTempo(), y += 20);
+//        ofxBenG::utilities::drawLabelValue("stutterTimes", stutterTimes, y += 20);
+//        ofxBenG::utilities::drawLabelValue("recordLengthBeats", recordLengthBeats, y += 20);
+//        ofxBenG::utilities::drawLabelValue("stutterLengthBeats", stutterLengthBeats, y += 20);
+//        ofxBenG::utilities::drawLabelValue("stutterDelayBeats", stutterDelayBeats, y += 20);
+//    }
 }
 
 void ofApp::createStutter(float beat) {
@@ -224,6 +231,11 @@ void ofApp::keyReleased(int key){
 
     if (key == 'r') {
         reverseScheduled = true;
+    }
+
+    if (key == ' ') {
+        effectGeneratorScheduled = true;
+        timeStarted = ofGetElapsedTimef();
     }
 }
 
