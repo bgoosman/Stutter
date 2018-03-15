@@ -1,7 +1,6 @@
 #include "ofApp.h"
 #include "math.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
     ofSetVerticalSync(true);
     ofEnableAlphaBlending();
@@ -13,14 +12,17 @@ void ofApp::setup(){
     mySample.load(ofToDataPath("new dreams tonite forward.wav"));
     backwardSample.load(ofToDataPath("new dreams tonite backward.wav"));
     currentSample = &mySample;
+
+    audio = new ofxBenG::audio();
     ofSoundStreamSetup(2, 0, this, sampleRate, audioBufferSize, 4);
 
     ableton.setupLink(beatsPerMinute, 8.0);
 
     const float desiredWidth = ofApp::width;
     const float desiredHeight = ofApp::height;
-    playModes.setup(ofxBenG::playmodes::c920, desiredWidth, desiredHeight, 60);
-    ofSetWindowShape(playModes.getVideoWidth(), playModes.getVideoHeight());
+    playModes = new ofxBenG::playmodes(ofxBenG::playmodes::c920, desiredWidth, desiredHeight, 60);
+    ofSetWindowShape(playModes->getWidth(), playModes->getHeight());
+    renderer.setup(playModes->getHeader(0));
 
     beatsPerMinute.addSubscriber([&]() { ableton.setBeatsPerMinute((int)beatsPerMinute); });
 
@@ -34,9 +36,7 @@ void ofApp::setup(){
     twister = new ofxBenG::twister();
     twister->bindToMultipleEncoders(&propertyBag);
 
-    for (int i = 0; i < playModes.getBufferCount(); i++) {
-        syphon[i].setName(ofToString(i));
-    }
+    syphon = new ofxBenG::syphon(playModes->getBufferCount());
 }
 
 ofApp::ofApp() {}
@@ -44,63 +44,44 @@ ofApp::~ofApp() {
     propertyBag.saveToXml();
 }
 
-//--------------------------------------------------------------
-void ofApp::update(){
-//    ofSetWindowTitle(ofToString(ofGetFrameRate()));
+void ofApp::update() {
     float const beat = ableton.getBeat();
     propertyBag.update();
-    playModes.update();
 
-    double intPart, fractionalPart;
-    fractionalPart = modf(beat, &intPart);
-
-    if (timeStarted > 0 && ofGetElapsedTimef() - timeStarted >= 60 * 5) {
-        ofExit();
-        return;
+    if (!playModes->isInitialized()) {
+        playModes->setup();
     }
 
-    if (playModes.isInitialized()) {
-        static bool firstTimeSetup = true;
-        if (firstTimeSetup) {
-            renderer.setup(playModes.headers[0]);
-            firstTimeSetup = false;
-        }
+    if (playModes->isInitialized()) {
+        playModes->update();
 
-        if (fractionalPart <= 0.05 && effectGenerator == nullptr && effectGeneratorScheduled) {
-            effectGeneratorScheduled = false;
-            effectGenerator = (ofxBenG::beat_action *) new ofxBenG::effect_generator(
-                    beat + 30,
-                    beatsPerMinute,
-                    60.0f,
-                    &playModes.buffers[0],
-                    &playModes.rate,
-                    &renderer,
-                    &mySample,
-                    &backwardSample,
-                    [&](ofxMaxiSample *s) {
-                        this->setCurrentSample(s);
-                    },
-                    &isPlayingTone,
-                    &frequency);
-            effectGenerator->start(beat);
+        if (ofxBenG::utilities::closeToInteger(beat)) {
+            if (effectGeneratorScheduled) {
+                effectGeneratorScheduled = false;
+                effectGenerator = (ofxBenG::beat_action *) new ofxBenG::effect_generator(
+                        beat + 5, beatsPerMinute,
+                        60.0f, &playModes->getBuffer(0), &playModes->getRate(), &renderer,
+                        &mySample, &backwardSample, audio);
+                effectGenerator->start(beat);
+            }
+
+            if (stutterScheduled) {
+                if (stutter != nullptr)
+                    deleteStutter(beat);
+                createStutter(beat);
+                stutterScheduled = false;
+            }
+
+            if (reverseScheduled) {
+                if (reverse != nullptr)
+                    deleteReverse(beat);
+                createReverse(beat);
+                reverseScheduled = false;
+            }
         }
 
         if (effectGenerator != nullptr) {
             effectGenerator->update(beat);
-        }
-
-        if (stutterScheduled && fractionalPart <= 0.05) {
-            if (stutter != nullptr)
-                deleteStutter(beat);
-            createStutter(beat);
-            stutterScheduled = false;
-        }
-
-        if (reverseScheduled && fractionalPart <= 0.05) {
-            if (reverse != nullptr)
-                deleteReverse(beat);
-            createReverse(beat);
-            reverseScheduled = false;
         }
 
         if (stutter != nullptr) {
@@ -119,17 +100,9 @@ void ofApp::update(){
     }
 }
 
-void ofApp::setCurrentSample(ofxMaxiSample* sample) {
-    this->currentSample = sample;
-}
-
 void ofApp::audioOut(float* output, int bufferSize, int nChannels) {
     for (int i = 0; i < bufferSize; i++) {
-        float mix = 0;
-        if (effectGenerator != nullptr)
-            mix += currentSample->playOnce();
-        if (isPlayingTone)
-            mix += oscillator.sinewave(frequency) / 3;
+        float mix = audio->getMix();
         output[nChannels * i] = mix;
         output[nChannels * i + 1] = mix;
     }
@@ -138,25 +111,22 @@ void ofApp::audioOut(float* output, int bufferSize, int nChannels) {
 void ofApp::draw(){
     ofBackground(0);
 
-    if (playModes.isInitialized()) {
-//        playModes.drawColumns(1);
-
-//        for (int i = 0; i < playModes.getBufferCount(); i++) {
-//            syphon[i].publishTexture(&playModes.getBufferTexture(i));
-//        }
-
+    if (playModes->isInitialized()) {
         renderer.draw(0, 0, ofGetWidth(), ofGetHeight());
+        for (int i = 0; i < playModes->getBufferCount(); i++) {
+            syphon->publishTexture(i, &playModes->getBufferTexture(i));
+        }
     }
 
-//    if (!inFullscreen) {
-//        float y = 15;
-//        ofxBenG::utilities::drawLabelValue("beat", ableton.getBeat(), y);
-//        ofxBenG::utilities::drawLabelValue("bpm", ableton.getTempo(), y += 20);
-//        ofxBenG::utilities::drawLabelValue("stutterTimes", stutterTimes, y += 20);
-//        ofxBenG::utilities::drawLabelValue("recordLengthBeats", recordLengthBeats, y += 20);
-//        ofxBenG::utilities::drawLabelValue("stutterLengthBeats", stutterLengthBeats, y += 20);
-//        ofxBenG::utilities::drawLabelValue("stutterDelayBeats", stutterDelayBeats, y += 20);
-//    }
+    if (!inFullscreen) {
+        float y = 15;
+        ofxBenG::utilities::drawLabelValue("beat", ableton.getBeat(), y);
+        ofxBenG::utilities::drawLabelValue("bpm", ableton.getTempo(), y += 20);
+        ofxBenG::utilities::drawLabelValue("stutterTimes", stutterTimes, y += 20);
+        ofxBenG::utilities::drawLabelValue("recordLengthBeats", recordLengthBeats, y += 20);
+        ofxBenG::utilities::drawLabelValue("stutterLengthBeats", stutterLengthBeats, y += 20);
+        ofxBenG::utilities::drawLabelValue("stutterDelayBeats", stutterDelayBeats, y += 20);
+    }
 }
 
 void ofApp::createStutter(float beat) {

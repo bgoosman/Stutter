@@ -33,8 +33,9 @@ public:
     ofxBenG::ableton ableton;
     ofxBenG::osc osc = {"10.1.10.202", 1234};
     ofxBenG::twister* twister;
-    ofxBenG::playmodes playModes;
-    ofxSyphonServer syphon[ofxBenG::playmodes::bufferCount];
+    ofxBenG::playmodes* playModes;
+	ofxBenG::syphon* syphon;
+	ofxBenG::audio* audio;
     ofxBenG::property_bag propertyBag;
     ofxBenG::property<float> beatsPerMinute = {"beatsPerMinute", 60, 0, 480};
     ofxBenG::property<int> stutterTimes = {"stutterTimes", 4, 1, 64};

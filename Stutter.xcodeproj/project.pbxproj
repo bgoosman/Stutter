@@ -191,6 +191,7 @@
 		1C490B8705672F1410388922 /* reduce.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = reduce.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/detail/reduce.hpp; sourceTree = SOURCE_ROOT; };
 		1CA242C7F8B6C67289732038 /* VideoHeader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VideoHeader.cpp; path = ../../../addons/ofxPlaymodes/src/AVHeaders/VideoHeader.cpp; sourceTree = SOURCE_ROOT; };
 		1E0518C0EC2F562B36D579FB /* AudioBufferSamplesMarker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioBufferSamplesMarker.cpp; path = ../../../addons/ofxPlaymodes/src/buffers/AudioBufferSamplesMarker.cpp; sourceTree = SOURCE_ROOT; };
+		1E0B18A9695BC730525331E2 /* syphon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = syphon.h; path = ../../../addons/ofxBenG/src/syphon.h; sourceTree = SOURCE_ROOT; };
 		1E95EFD35ED9C5D97F2F015E /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
 		1EFA3ACBB8D16CC0DA1E79C6 /* maxiAtoms.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = maxiAtoms.cpp; path = ../../../addons/ofxMaxim/libs/maxiAtoms.cpp; sourceTree = SOURCE_ROOT; };
 		1F9D46D19614774956DFE362 /* seam_finders.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = seam_finders.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/stitching/detail/seam_finders.hpp; sourceTree = SOURCE_ROOT; };
@@ -283,6 +284,7 @@
 		63152EF07846DECD2854B62C /* utility.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utility.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/utility.hpp; sourceTree = SOURCE_ROOT; };
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
+		663647A8B3A7C90406883920 /* audio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = audio.h; path = ../../../addons/ofxBenG/src/audio.h; sourceTree = SOURCE_ROOT; };
 		665780A3005496E3A4A0D9EF /* compat.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compat.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/legacy/compat.hpp; sourceTree = SOURCE_ROOT; };
 		67AF0E794FA186DD25454CC9 /* calib3d.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = calib3d.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/calib3d/calib3d.hpp; sourceTree = SOURCE_ROOT; };
 		682082DEC78C75C8FB18B7DB /* flags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = flags.c; path = ../../../addons/ofxKinect/libs/libfreenect/src/flags.c; sourceTree = SOURCE_ROOT; };
@@ -409,6 +411,7 @@
 		B7DFDA8276DD7E5261639A77 /* VideoBuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VideoBuffer.cpp; path = ../../../addons/ofxPlaymodes/src/buffers/VideoBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		B8427966039B53A0FE69C1F0 /* cxcore.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cxcore.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/cxcore.h; sourceTree = SOURCE_ROOT; };
 		B8A2CBF3E24E6E5026B13A90 /* ofxBase3DVideo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBase3DVideo.h; path = ../../../addons/ofxKinect/src/ofxBase3DVideo.h; sourceTree = SOURCE_ROOT; };
+		B8F969A327158608ABB6A941 /* stutter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stutter.h; path = ../../../addons/ofxBenG/src/stutter.h; sourceTree = SOURCE_ROOT; };
 		BA2345C0AC2330B6CF370764 /* detection_based_tracker.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = detection_based_tracker.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/contrib/detection_based_tracker.hpp; sourceTree = SOURCE_ROOT; };
 		BA5114869056DFF1A50CFA4A /* fft.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fft.h; path = ../../../addons/ofxMaxim/libs/fft.h; sourceTree = SOURCE_ROOT; };
 		BBAF9D981351C596CA67CAF9 /* hybridtracker.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = hybridtracker.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/contrib/hybridtracker.hpp; sourceTree = SOURCE_ROOT; };
@@ -510,6 +513,7 @@
 		ECC34C470C60F0A2AE2761B1 /* random.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = random.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/random.h; sourceTree = SOURCE_ROOT; };
 		ECF68663669184064E381DD4 /* USBManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = USBManager.h; path = ../../../addons/ofxPS3EyeGrabber/libs/ps3eye/src/USBManager.h; sourceTree = SOURCE_ROOT; };
 		ED5F1C45F44E7A90BE170AF4 /* AudioRenderer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AudioRenderer.h; path = ../../../addons/ofxPlaymodes/src/renderers/AudioRenderer.h; sourceTree = SOURCE_ROOT; };
+		EE0FC610D8BD18E14BCF1E1F /* maxim.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = maxim.h; path = ../../../addons/ofxBenG/src/maxim.h; sourceTree = SOURCE_ROOT; };
 		EEEA907F4732A9D8875ABB9C /* motion_stabilizing.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = motion_stabilizing.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/videostab/motion_stabilizing.hpp; sourceTree = SOURCE_ROOT; };
 		EEF220719FD1B579FBA8D522 /* VideoRate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = VideoRate.cpp; path = ../../../addons/ofxPlaymodes/src/filters/VideoRate.cpp; sourceTree = SOURCE_ROOT; };
 		EF92814A0D966277C7E99321 /* AudioFrame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = AudioFrame.cpp; path = ../../../addons/ofxPlaymodes/src/frames/AudioFrame.cpp; sourceTree = SOURCE_ROOT; };
@@ -1350,15 +1354,19 @@
 			isa = PBXGroup;
 			children = (
 				06FC9E4E8C882BDBADE6C581 /* ableton.h */,
+				663647A8B3A7C90406883920 /* audio.h */,
 				3DE7C5943E0EA91D46C93D71 /* beat_action.h */,
 				D6FA4F019B5750FC9E979FC5 /* blackmagic.h */,
 				B790E5B2D0D0D96C23E7F615 /* ease.h */,
+				EE0FC610D8BD18E14BCF1E1F /* maxim.h */,
 				75BE6926C740966DDC5B4205 /* ofxBenG.h */,
 				C99D5D0A3E96D087B58CFC46 /* oscWrapper.h */,
 				EA82CC0EA6BA6F4C64A1C14C /* playmodes.cpp */,
 				54E601587F612CE38B547E21 /* playmodes.h */,
 				C78F1E2689A74DDB4628A387 /* property.h */,
 				092952ECD6AD8FD45230F9DE /* property_bag.h */,
+				B8F969A327158608ABB6A941 /* stutter.h */,
+				1E0B18A9695BC730525331E2 /* syphon.h */,
 				C0BAF966AF9F6A356DEC7FD5 /* tracer.h */,
 				766536E8D155E99427BFABED /* twister.h */,
 				087FB556804210E2920FB7D9 /* utilities.h */,
