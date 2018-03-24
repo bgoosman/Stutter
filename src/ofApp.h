@@ -8,7 +8,6 @@
 #include "ofxMaxim.h"
 
 class ofApp : public ofBaseApp {
-
 public:
     ofApp();~ofApp();
 	void setup();
@@ -30,6 +29,14 @@ public:
 
 	// App
 	void log(float beat, const string &message) const;
+    void onEncoderPressed(int& encoder);
+	void onEffectScheduled(int& totalEffectsScheduled);
+	void loadSample(int index);
+	struct sample {
+		std::string forwards;
+		std::string backwards;
+	};
+	std::vector<sample> samples;
     ofxBenG::ableton* ableton;
     ofxBenG::twister* twister;
     ofxBenG::playmodes* playModes;
@@ -38,10 +45,9 @@ public:
 	ofxBenG::timeline* timeline = nullptr;
     ofxBenG::property_bag propertyBag;
     ofxBenG::property<float> beatsPerMinute = {"beatsPerMinute", 60, 0, 480};
-    ofxBenG::property<int> stutterTimes = {"stutterTimes", 4, 1, 64};
-    ofxBenG::property<float> recordLengthBeats = {"recordLengthBeats", 0.25, 0.025, 4};
-    ofxBenG::property<float> stutterLengthBeats = {"stutterLengthBeats", 0.25, 0.025, 4};
-    ofxBenG::property<float> stutterDelayBeats = {"stutterDelayBeats", 0.0, 0.0, 8.0};
+    ofxBenG::property<float> recordLengthBeats = {"recordLengthBeats", 0.25, 0.0, 8.0};
+    ofxBenG::property<float> rewindLengthBeats = {"rewindLengthBeats", 0.0, 0.0, 8.0};
+	ofxBenG::property<float> stutterLengthBeats = {"stutterLengthBeats", 0.25, 0.0, 8.0};
     static float constexpr width = 1280;
     static float constexpr height = width / (1920.0/1080.0);
     bool inFullscreen = false;

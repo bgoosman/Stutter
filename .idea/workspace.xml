@@ -16,8 +16,18 @@
       <file leaf-file-name="ofApp.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ofApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="131" column="52" lean-forward="false" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ofUtils.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../libs/openFrameworks/utils/ofUtils.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="334" column="7" lean-forward="false" selection-start-line="334" selection-start-column="7" selection-end-line="334" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -26,8 +36,8 @@
       <file leaf-file-name="ofApp.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ofApp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            <state relative-caret-position="338">
+              <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="e#14#33#0" expanded="true" />
               </folding>
@@ -35,10 +45,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="twister.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/twister.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="162" column="8" lean-forward="false" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ableton.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/ableton.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="558">
               <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="e#37#53#0" expanded="true" />
@@ -50,8 +70,8 @@
       <file leaf-file-name="audio.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/audio.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="362">
+              <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding>
                 <element signature="e#47#67#0" expanded="true" />
               </folding>
@@ -62,7 +82,7 @@
       <file leaf-file-name="maximilian.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../addons/ofxMaxim/libs/maximilian.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="1278">
               <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
               <folding />
             </state>
@@ -72,8 +92,8 @@
       <file leaf-file-name="beat_action.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/beat_action.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="319" column="32" lean-forward="true" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
               <folding>
                 <element signature="e#123#143#0" expanded="true" />
               </folding>
@@ -81,21 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicVideoRenderer.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/renderers/BasicVideoRenderer.cpp">
+      <file leaf-file-name="maxim.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/maxim.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="298">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoHeader.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/AVHeaders/VideoHeader.cpp">
+      <file leaf-file-name="BasicVideoRenderer.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/renderers/BasicVideoRenderer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="414">
+              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -130,6 +150,8 @@
       <find>getRate</find>
       <find>removing mix</find>
       <find>baseBeat</find>
+      <find>effectGener</find>
+      <find>playOnce</find>
     </findStrings>
     <replaceStrings>
       <replace>void startThisAction(float beat) {</replace>
@@ -142,7 +164,6 @@
       <list>
         <option value="$PROJECT_DIR$/../../../libs/openFrameworks/video/ofAVFoundationGrabber.mm" />
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/property_bag.h" />
-        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/twister.h" />
         <option value="$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/AVHeaders/VideoHeader.h" />
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/playmodes.cpp" />
         <option value="$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/AVHeaders/VideoHeader.cpp" />
@@ -156,19 +177,20 @@
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/maxim.h" />
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/syphon.h" />
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/playmodes.h" />
-        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/beat_action.h" />
-        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/audio.h" />
         <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/ableton.h" />
+        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/twister.h" />
+        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/beat_action.h" />
         <option value="$PROJECT_DIR$/src/ofApp.h" />
+        <option value="$PROJECT_DIR$/../../../addons/ofxBenG/src/audio.h" />
         <option value="$PROJECT_DIR$/src/ofApp.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="width" value="2560" />
+    <option name="height" value="1414" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -185,7 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,6 +241,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,10 +286,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46234155" sideWeight="0.5015625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49701938" sideWeight="0.484375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49701938" sideWeight="0.484375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46153846" sideWeight="0.4984375" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46125185" sideWeight="0.4984375" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -289,25 +311,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="66" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/twister.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1908">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../addons/ofxMaxim/libs/maxiAtoms.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="appcode.project-settings://3de5342">
       <provider selected="true" editor-type-id="AppCode.ProjectSettings">
         <state />
@@ -567,16 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/maxim.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-          <folding>
-            <element signature="e#33#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../addons/ofxMaxim/libs/maximilian.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4014">
@@ -595,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../addons/ofxPlaymodes/src/renderers/BasicVideoRenderer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="414">
           <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding />
         </state>
@@ -603,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../addons/ofxMaxim/libs/maximilian.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="1278">
           <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
           <folding />
         </state>
@@ -613,27 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/beat_action.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <element signature="e#123#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/audio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#67#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,7 +624,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/ableton.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="558">
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#37#53#0" expanded="true" />
@@ -655,20 +632,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/twister.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="162" column="8" lean-forward="false" selection-start-line="162" selection-start-column="8" selection-end-line="162" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofApp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state relative-caret-position="338">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="e#14#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../libs/openFrameworks/utils/ofUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="334" column="7" lean-forward="false" selection-start-line="334" selection-start-column="7" selection-end-line="334" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/beat_action.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="319" column="32" lean-forward="true" selection-start-line="319" selection-start-column="32" selection-end-line="319" selection-end-column="32" />
+          <folding>
+            <element signature="e#123#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/maxim.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../addons/ofxBenG/src/audio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding>
+            <element signature="e#47#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="131" column="52" lean-forward="false" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
           <folding />
         </state>
       </provider>
